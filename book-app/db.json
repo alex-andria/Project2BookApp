@@ -4,13 +4,13 @@
             "id": 1,
             "title": "Eloquent JavaScript, Second Edition",
             "author": "Marijn Haverbeke",
-            "date finished":"12/20/2015" ,
+            "date finished": "12/20/2015",
             "time read": 120,
             "reading": false,
             "to-read": false,
             "finished": true
         },
-	{
+        {
             "id": 2,
             "title": "Cracking the Coding Interview",
             "author": "Gayle Laakmann McDowell",
@@ -19,8 +19,7 @@
             "to-read": false,
             "finished": false
         },
-
-	{
+        {
             "id": 3,
             "title": "1984",
             "author": "George Orwell",
@@ -30,4 +29,5 @@
             "to-read": false,
             "finished": true
         }
+    ]
 }

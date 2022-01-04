@@ -1,7 +1,9 @@
 import React from "react";
 
-function BookList() {
+function BookList({title}) {
     return (
-        <li>${}</li>
+        <li>{title}</li>
     )
 }
+
+export default BookList;
