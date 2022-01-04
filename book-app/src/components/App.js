@@ -4,6 +4,10 @@ import SearchBar from "./SearchBar";
 import Home from "./Home";
 
 function App() {
+  fetch()
+
+
+
   return (
     <div className="App">
      
