@@ -1,7 +1,13 @@
 import React from "react";
 
-function BookList() {
+function BookList({books}) {
+    const {title, author, dateFinished, finished, timeRead } = books; 
     return (
-        <li>${}</li>
+        <li>Title: {title} Author: {author} 
+        {dateFinished ? "Date finished: " + dateFinished : null} &nbsp;
+        {timeRead ? timeRead + "minutes " : null}       
+        </li>
     )
 }
+
+export default BookList;
