@@ -1,13 +1,14 @@
 import React from "react";
 import BookList from "../BookList"
+import BookShelf from "../BookShelf";
 
-function Home({books}) {
-    
+function Home({ books }) {
+
     return (
         <>
             {/* search */}
             {/* category */}
-            <BookShelf books={books}/>
+            <BookShelf books={books} />
             <BookList books={books} />
         </>
 
