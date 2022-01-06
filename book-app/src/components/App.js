@@ -18,6 +18,7 @@ function App() {
       .then((data) => setBooks(data));
   }, []);
 
+  // takes book list and filters things by title or author
   const searchBooks = books.filter((b) =>
     b.author.toLowerCase().includes(search.toLowerCase())
     ||

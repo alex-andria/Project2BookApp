@@ -25,6 +25,10 @@ code {
 
 /* End of Nav Bar */
 
+.search{
+  text-align: center;
+}
+
 /* book Shelf */
   .BookShelf {
     margin: 2rem auto;

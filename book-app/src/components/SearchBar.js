@@ -10,6 +10,7 @@ function SearchBar({search, setSearch}) {
     <div className="search">
       <label htmlFor="search">Search: </label>
       <input
+      placeholder="Search by Author or Title"
       onChange={(e)=>handleChange(e)}
       name="search"
       type="text"

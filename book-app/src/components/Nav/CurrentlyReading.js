@@ -6,6 +6,7 @@ function CurrentlyReading({ books, updateBook }) {
     const currentlyReading = [...books.filter((book) => book.reading === true)];
     const buttonText = "Finished Reading"
 
+    //to be passed to booklistitem as props, will update book in list that has button clicked on
     function finishBook(finishedBook) {
         updateBook({
             ...finishedBook,

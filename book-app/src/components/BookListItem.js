@@ -3,6 +3,7 @@ import CurrentlyReading from "./Nav/CurrentlyReading";
 
 function BookListItem({ book, buttonText, bookChange }) {
 
+    // calls bookChange function, passed into 
     function clickHandler() {
         bookChange(book);
     }
