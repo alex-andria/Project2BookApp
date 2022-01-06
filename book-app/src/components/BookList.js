@@ -1,13 +1,23 @@
 import React from "react";
 
-function BookList({books}) {
-    const {title, author, dateFinished, finished, timeRead } = books; 
+function BookList({books, buttonText, bookChange }) {
+
     return (
-        <li>Title: {title} Author: {author} 
-        {dateFinished ? "Date finished: " + dateFinished : null} &nbsp;
-        {timeRead ? timeRead + "minutes " : null}       
-        </li>
-    )
+            <div>
+                <ul className="BookList">
+                {books.map((book) => 
+                    <BookListItem  
+                        key={book.id} 
+                        book={book}
+                        buttonText={buttonText}
+                        bookChange={bookChange}
+                    />
+                    )}
+                </ul>
+            </div>
+
+    );
+
 }
 
 export default BookList;

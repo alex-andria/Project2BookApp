@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< Updated upstream
 import BookList from "../BookList"
 
 function ToRead({ books }) {
@@ -12,6 +13,18 @@ function ToRead({ books }) {
             </ul>
         </div>
 
+import BookList from "../BookList";
+import BookShelf from "../BookShelf";
+
+function ToRead({ books }) {
+    const toRead = [...books.filter((book) => book.toRead === true)];
+
+    return (
+        <div>
+            <BookShelf books={toRead} />
+            <BookList books={toRead} />
+        </div>
+>>>>>>> Stashed changes
     );
 
 }

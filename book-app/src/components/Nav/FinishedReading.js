@@ -1,17 +1,15 @@
 import React from "react";
-import BookList from "../BookList"
+import BookList from "../BookList";
+import BookShelf from "../BookShelf";
 
 function FinishedReading({books}) {
-    
+    const finishedBooks=[...books.filter((book) => book.finished === true)];
+
     return (
         <div>
-            <ul>
-            {books.map((book) => 
-                <BookList  key={book.id} books={book}/>
-                )}
-            </ul>
+        <BookShelf books={finishedBooks}/>
+        <BookList books={finishedBooks} />
         </div>
-
     );
 
 }

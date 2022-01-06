@@ -10,34 +10,44 @@ import FinishedReading from "./Nav/FinishedReading";
 
 function App() {
   const [books, setBooks] = useState([]);
-  const [sortedBooks, setSortBooks] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
-
     fetch(`http://localhost:3000/books`)
       .then((r) => (r.json()))
       .then((data) => setBooks(data));
-
   }, []);
+
+  const searchBooks = books.filter((b) =>
+    b.author.toLowerCase().includes(search.toLowerCase())
+    ||
+    b.title.toLowerCase().includes(search.toLowerCase())
+  );
+
+  function updateBook(changedBook) {
+    setBooks([...books.filter((book)=>book.id !== changedBook.id), changedBook])
+  };
+
 
   console.log(books);
 
   return (
     <div><span></span>
       <NavBar />
+      <SearchBar search={search} setSearch={setSearch} />
 
       <Switch>
         <Route exact path="/toread">
-          <ToRead books={books}/>
+          <ToRead books={searchBooks} updateBook={updateBook} />
         </Route>
         <Route exact path="/currentlyreading">
-          <CurrentlyReading books={books}/>
+          <CurrentlyReading books={searchBooks} updateBook={updateBook} />
         </Route>
         <Route exact path="/finishedreading">
-          <FinishedReading books={books}/>
+          <FinishedReading books={searchBooks} updateBook={updateBook} />
         </Route>
         <Route exact path="/">
-          <Home books={books} />
+          <Home books={searchBooks} />
         </Route>
       </Switch>
     </div>

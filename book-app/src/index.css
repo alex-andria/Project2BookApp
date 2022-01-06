@@ -11,3 +11,118 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+<<<<<<< Updated upstream
+=======
+
+/* App */
+.App{
+  background-color: #ffffff;
+}
+
+/* Nav Bar */
+
+  .NavButton{
+    margin-left: 15px;
+  }
+
+/* End of Nav Bar */
+
+/* book Shelf */
+  .BookShelf {
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    max-width: 636px;
+    background: var(--background);
+    color: var(--font-color);
+    box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.2);
+    border-radius: 10px;
+  }
+
+  .BookBox {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 5px solid rgb(80, 58, 53);
+  }
+
+  .BookBoxItem {
+    border-bottom: 5px solid rgb(80, 58, 53);
+    padding-top: 10px;
+    padding-bottom: 7px;
+  }
+
+  .BookBoxAdd {
+    max-width: 150px;
+    max-height: 200px;
+    border: 4px dotted rgb(0, 0, 0);
+  }
+/* end of book shelf */
+
+/* book list */
+  .BookList {
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    max-width: 700px;
+    background: var(--background);
+    color: var(--font-color);
+    border-radius: 10px;
+  }
+
+  .BookList li {
+    list-style-type: none;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    max-width: 700px;
+    background: var(--background);
+    color: var(--font-color);
+    box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.2);
+    border-radius: 10px;
+
+  }
+
+  .BookInfo{
+    float: left;
+    color: #858585;
+    display: block; /* change the display type           */
+    margin-right: 8px;
+  }
+
+  .BookInfoValue{
+    float: left;
+  }
+
+  .BookInfoValueReview{
+    float: left;
+    margin-bottom: 40px;
+  }
+
+  .TimeRead{
+    float: right;
+    color: #858585;
+    display: block; /* change the display type           */
+    margin-right: 8px;
+  }
+
+  .TimeReadData{
+    float: right;
+  }
+
+
+  .DateFinished{
+    float: right;
+    color: #858585;
+    display: block; /* change the display type           */
+    margin-right: 8px;
+  }
+
+  .DateFinishedData{
+    float: right;
+  }
+
+  .updateButtons{
+    float: right;
+    display: block;
+  }
+
+/* end of book list */
+>>>>>>> Stashed changes
