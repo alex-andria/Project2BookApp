@@ -1,25 +1,29 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function NavBar() {
+function NavBar({search, setSearch}) {
   return (
-    <div className="NavButton">
-      <NavLink to="/" exact>
-        Home
-      </NavLink>
-      <br />
-      <NavLink to="/toread" exact>
-        To Read
-      </NavLink>
-      <br />
-      <NavLink to="/currentlyreading" exact>
-        Currently Reading
-      </NavLink>
-      <br />
-      <NavLink to="/finishedreading" exact>
-        Finished Reading
-      </NavLink>
-    </div>
+    <>
+      <div className="title" id="myTopnav"> 
+        <a>
+          <h1>BookNook</h1>
+        </a>
+      </div>
+      <div className="topnav" id="myTopnav">
+        <NavLink to="/" exact>
+          Home
+        </NavLink>
+        <NavLink to="/toread" exact>
+          To Read
+        </NavLink>
+        <NavLink to="/currentlyreading" exact>
+          Currently Reading
+        </NavLink>
+        <NavLink to="/finishedreading" exact>
+          Finished Reading
+        </NavLink>
+      </div>
+    </>
   );
 }
 

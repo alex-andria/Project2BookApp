@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
-import Header from "./Header";
 import SearchBar from "./SearchBar";
 import Home from "./Nav/Home";
 import NavBar from "./Nav/NavBar";
@@ -42,6 +41,8 @@ function App() {
     <div>
       <span></span>
       <NavBar />
+      <br/>
+      <br/>
       <SearchBar search={search} setSearch={setSearch} />
 
       <Switch>
