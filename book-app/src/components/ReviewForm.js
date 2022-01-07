@@ -1,59 +1,56 @@
 import React, { useState } from "react";
 
+
 function ReviewForm({ book, updateBook, setIsOpen }) {
   const [bookReview, setReview] = useState({
-    rating: null,
-    review: "",
+    ...book,
+    "rating": null,
+    "review": null,
   });
 
   function changeHandler(e) {
     setReview({
-      ...book,
-      [e.target.name]: e.target.value,
+      ...bookReview,
+      [e.target.name]: e.target.value
     });
-    console.log(bookReview);
+    console.log(bookReview)
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    updateBook(bookReview);
+    updateBook({ ...bookReview });
     setIsOpen(false);
   }
 
   return (
     <div>
+      <h3>{book.title} by {book.author}</h3>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <div>
-          <label for="rating">Rating: </label>
-          <select
-            value={bookReview.rating}
-            name="rating"
-            onChange={(e) => changeHandler(e)}
-          >
-            <option value={null} disabled>
-              Select
-            </option>
-            <option value="⭐">1</option>
-            <option value="⭐⭐">2</option>
-            <option value="⭐⭐⭐">3</option>
-            <option value="⭐⭐⭐⭐">4</option>
-            <option value="⭐⭐⭐⭐⭐">5</option>
-          </select>
-        </div>
 
         <div>
-          <label for="review">Review: </label>
-          <textarea
-            type="text"
-            value={bookReview.review}
-            onChange={(e) => changeHandler(e)}
-            name="review"
-          />
+          <label>Rating: </label>
+          <select value={bookReview.rating} name="rating" onChange={(e) => changeHandler(e)}>
+            <option value="⭐">⭐</option>
+            <option value="⭐⭐">⭐⭐</option>
+            <option value="⭐⭐⭐">⭐⭐⭐</option>
+            <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+            <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+          </select>
         </div>
-        <button type="submit">Submit</button>
+        <div>
+          <label>Review: </label>
+          <input type="textarea" value={bookReview.review} onChange={(e) => changeHandler(e)} name="review" />
+        </div>
+        <button type="submit">
+          Submit
+        </button>
       </form>
+      <button type="button" onClick={() => setIsOpen(false)}>
+        Close
+      </button>
     </div>
-  );
+  )
 }
+
 
 export default ReviewForm;
