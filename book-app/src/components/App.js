@@ -12,6 +12,11 @@ function App() {
   const [books, setBooks] = useState([]);
   const [sortedBooks, setSortBooks] = useState([]);
 
+  function addBook(newBook){
+    const updatedBooks = [...books, newBook];
+    setBooks(updatedBooks);
+  }
+
   useEffect(() => {
 
     fetch(`http://localhost:3000/books`)
@@ -37,7 +42,10 @@ function App() {
           <FinishedReading books={books}/>
         </Route>
         <Route exact path="/">
-          <Home books={books} />
+          <Home 
+            books={books} 
+            onAddBook={addBook}
+          />
         </Route>
       </Switch>
     </div>

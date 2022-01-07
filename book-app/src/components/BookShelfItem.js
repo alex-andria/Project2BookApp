@@ -1,12 +1,12 @@
 import React from "react";
 
-function BookShelfItem(){
+function BookShelfItem({book}){
 
     const bookImage = './blankbook.png';
 
     return(
     <div className="BookBoxItem">
-        <span>title</span>
+        <span>{book.title}</span>
         <div>
             <img src={bookImage}/>
         </div>
