@@ -5,8 +5,8 @@ import BookShelf from "../BookShelf";
 function Home({ books, onAddBook }) {
   return (
     <>
-      <BookShelf books={books} onAddBook={onAddBook} />
-      <BookList books={books} />
+        <BookShelf books={books} onAddBook={onAddBook} />
+        <BookList books={books} />
     </>
   );
 }
