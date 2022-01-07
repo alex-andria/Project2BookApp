@@ -1,7 +1,7 @@
 import React from "react";
 import BookListItem from "./BookListItem";
 
-function BookList({books, buttonText, bookChange}) {
+function BookList({books, buttonText, bookChange, onDeleteBook}) {
 
     return (
             <div>
@@ -13,6 +13,7 @@ function BookList({books, buttonText, bookChange}) {
                         buttonText={buttonText}
                         bookChange={bookChange}
                         dateFinished={book.dateFinished}
+                        onDeleteBook={onDeleteBook}
                     />
                     )}
                 </ul>

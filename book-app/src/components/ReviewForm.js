@@ -43,7 +43,7 @@ function ReviewForm({ book, updateBook, setIsOpen }) {
 
         <div>
           <label for="review">Review: </label>
-          <input
+          <textarea
             type="text"
             value={bookReview.review}
             onChange={(e) => changeHandler(e)}

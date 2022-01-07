@@ -8,16 +8,18 @@
       "timeRead": 120,
       "reading": false,
       "toRead": false,
-      "finished": true
+      "finished": true,
+      "review": "Learned so much!",
+      "rating": "⭐⭐⭐⭐"
     },
     {
       "id": 2,
       "title": "Cracking the Coding Interview",
       "author": "Gayle Laakmann McDowell",
       "timeRead": 20,
-      "reading": true,
+      "reading": false,
       "toRead": false,
-      "finished": false
+      "finished": true
     },
     {
       "id": 3,
@@ -27,15 +29,36 @@
       "timeRead": 355,
       "reading": false,
       "toRead": false,
-      "finished": true
+      "finished": true,
+      "rating": "⭐⭐⭐⭐",
+      "review": "This changed the way that I looked at ideologies and changed the way I looked at leadership. Cynical, scathing, and not without its flaws, this is still a stark, haunting glimpse at what could be."
     },
     {
       "id": 4,
       "title": "1Q84",
       "author": "Haruki Murakami",
-      "reading": false,
-      "toRead": true,
+      "reading": true,
+      "toRead": false,
       "finished": false
+    },
+    {
+      "id": 5,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "reading": true,
+      "toRead": false,
+      "finished": false
+    },
+    {
+      "id": 6,
+      "title": "Lord of the Flies",
+      "author": "William Golding",
+      "dateFinished": "09/14/2018",
+      "reading": false,
+      "toRead": false,
+      "finished": true,
+      "rating": "⭐⭐⭐",
+      "review": "Very gruesome but necessary read."
     }
   ]
 }
