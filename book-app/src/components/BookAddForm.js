@@ -78,7 +78,7 @@ function BookAddForm({onAddBook}){
                             <br></br>
                             <select onChange={(e) => setListCat(e.target.value)}>
                                 <option value="All">Select Book List Category</option>
-                                <option value="to-read">To Read</option>
+                                <option value="toRead">To Read</option>
                                 <option value="reading">Reading</option>
                                 <option value="finished">Finished Reading</option>
                             </select>

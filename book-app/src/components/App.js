@@ -10,48 +10,56 @@ import FinishedReading from "./Nav/FinishedReading";
 
 function App() {
   const [books, setBooks] = useState([]);
-  const [sortedBooks, setSortBooks] = useState([]);
+  const [search, setSearch] = useState("");
 
-  function addBook(newBook){
+  useEffect(() => {
+    fetch(`http://localhost:3000/books`)
+      .then((r) => r.json())
+      .then((data) => setBooks(data));
+  }, []);
+
+  // adds new book and category to json
+  function addBook(newBook) {
     const updatedBooks = [...books, newBook];
     setBooks(updatedBooks);
   }
 
-  useEffect(() => {
+  // takes book list and filters things by title or author
+  const searchBooks = books.filter(
+    (b) =>
+      b.author.toLowerCase().includes(search.toLowerCase()) ||
+      b.title.toLowerCase().includes(search.toLowerCase())
+  );
 
-    fetch(`http://localhost:3000/books`)
-      .then((r) => (r.json()))
-      .then((data) => setBooks(data));
-
-  }, []);
-
-  console.log(books);
+  function updateBook(changedBook) {
+    setBooks([
+      ...books.filter((book) => book.id !== changedBook.id),
+      changedBook,
+    ]);
+  }
 
   return (
-    <div><span></span>
+    <div>
+      <span></span>
       <NavBar />
+      <SearchBar search={search} setSearch={setSearch} />
 
       <Switch>
         <Route exact path="/toread">
-          <ToRead books={books}/>
+          <ToRead books={searchBooks} updateBook={updateBook} />
         </Route>
         <Route exact path="/currentlyreading">
-          <CurrentlyReading books={books}/>
+          <CurrentlyReading books={searchBooks} updateBook={updateBook} />
         </Route>
         <Route exact path="/finishedreading">
-          <FinishedReading books={books}/>
+          <FinishedReading books={searchBooks} updateBook={updateBook} />
         </Route>
         <Route exact path="/">
-          <Home 
-            books={books} 
-            onAddBook={addBook}
-          />
+          <Home books={searchBooks} onAddBook={addBook} />
         </Route>
       </Switch>
     </div>
   );
 }
-
-
 
 export default App;

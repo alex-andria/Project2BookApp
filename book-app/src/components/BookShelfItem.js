@@ -1,18 +1,17 @@
 import React from "react";
 
-function BookShelfItem({book}){
+function BookShelfItem({ book }) {
+  const bookImage = "./blankbook.png";
 
-    const bookImage = './blankbook.png';
-
-    return(
+  return (
     <div className="BookBoxItem">
-        <span>{book.title}</span>
-        <div>
-            <img src={bookImage}/>
-        </div>
-        <span>ratings</span>
+      <span>{book.title}</span>
+      <div>
+        <img src={bookImage} />
+      </div>
+      <span>{book.rating}</span>
     </div>
-    )
+  );
 }
 
 export default BookShelfItem;

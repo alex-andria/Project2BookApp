@@ -4,36 +4,38 @@
       "id": 1,
       "title": "Eloquent JavaScript, Second Edition",
       "author": "Marijn Haverbeke",
-      "date finished": "12/20/2015",
-      "time read": 120,
+      "dateFinished": "12/20/2015",
+      "timeRead": 120,
       "reading": false,
-      "to-read": false,
+      "toRead": false,
       "finished": true
     },
     {
       "id": 2,
       "title": "Cracking the Coding Interview",
       "author": "Gayle Laakmann McDowell",
-      "time read": 20,
+      "timeRead": 20,
       "reading": true,
-      "to-read": false,
+      "toRead": false,
       "finished": false
     },
     {
       "id": 3,
       "title": "1984",
       "author": "George Orwell",
-      "date finished": "06/02/2016",
-      "time read": 355,
+      "dateFinished": "06/02/2016",
+      "timeRead": 355,
       "reading": false,
-      "to-read": false,
+      "toRead": false,
       "finished": true
     },
     {
-      "title": "NEW BOOK TITLE",
-      "author": "Some Author",
-      "to-read": true,
-      "id": 4
+      "id": 4,
+      "title": "1Q84",
+      "author": "Haruki Murakami",
+      "reading": false,
+      "toRead": true,
+      "finished": false
     }
   ]
 }
