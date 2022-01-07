@@ -23,6 +23,14 @@ function App() {
     setBooks(updatedBooks);
   }
 
+  //delete a book
+  function handleDelete(oldBook){
+    const newBookListArray = books.filter((book) => {
+      return book !== oldBook;
+    });
+    setBooks(newBookListArray);
+  }
+
   // takes book list and filters things by title or author
   const searchBooks = books.filter(
     (b) =>
@@ -31,6 +39,14 @@ function App() {
   );
 
   function updateBook(changedBook) {
+    fetch(`http://localhost:3000/books/${changedBook.id}`, {
+      method:'PATCH',
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(changedBook)
+    })
+    .then(res=>res.json());
     setBooks([
       ...books.filter((book) => book.id !== changedBook.id),
       changedBook,
@@ -56,7 +72,7 @@ function App() {
           <FinishedReading books={searchBooks} updateBook={updateBook} />
         </Route>
         <Route exact path="/">
-          <Home books={searchBooks} onAddBook={addBook} />
+          <Home books={searchBooks} onAddBook={addBook} onDeleteBook={handleDelete} />
         </Route>
       </Switch>
     </div>

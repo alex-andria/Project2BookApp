@@ -25,7 +25,8 @@ code {
 }
 
 .title a {
-  float: center;
+  float: left;
+  padding-left: 20px;
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -66,10 +67,6 @@ code {
 
 
 /* Nav Bar */
-
-  .NavButton{
-    margin-left: 15px;
-  }
 
   body {
     margin: 0;
@@ -173,6 +170,7 @@ code {
     margin: 2rem auto;
     padding: 1rem 2rem;
     max-width: 700px;
+    max-height: 400px;
     background: var(--background);
     color: var(--font-color);
     border-radius: 10px;
@@ -183,6 +181,7 @@ code {
     margin: 2rem auto;
     padding: 1rem 2rem;
     max-width: 700px;
+    max-height: 400px;
     background: var(--background);
     color: var(--font-color);
     box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.2);
@@ -229,6 +228,10 @@ code {
     float: right;
   }
 
+  .delete-button {
+    float: right;
+    display: block;
+  }
 /* end of book list */
 
 /* Book Add Form */

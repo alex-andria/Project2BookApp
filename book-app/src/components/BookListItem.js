@@ -1,9 +1,18 @@
 import React from "react";
 
-function BookListItem({ book, buttonText, bookChange }) {
+function BookListItem({ book, buttonText, bookChange, onDeleteBook }) {
   // calls bookChange function, passed into
   function clickHandler() {
     bookChange(book);
+  }
+
+  function handleSubmitDelete(e){
+    fetch(
+      (`http://localhost:3000/books/${book.id}`),
+      {
+        method: 'DELETE',
+      })
+      .then(() => onDeleteBook(book))
   }
 
   return (
@@ -40,12 +49,13 @@ function BookListItem({ book, buttonText, bookChange }) {
         <br />
         <span className="BookInfo">Rating:</span>
         <span className="BookInfoValue">{book.rating}</span>
+        <button className="delete-button" onClick={handleSubmitDelete}>Delete</button>
 
-        <br />
+        <br/><br/>
 
         <span className="BookInfo">Review: </span>
         <span className="BookInfoValue">{book.review}</span>
-        <br/>
+        <br /><br /><br /><br /><br /> 
       </li>
     </div>
   );
