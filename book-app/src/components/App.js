@@ -29,7 +29,6 @@ function App() {
     setBooks([...books.filter((book)=>book.id !== changedBook.id), changedBook])
   };
 
-
   console.log(books);
 
   return (
@@ -53,7 +52,7 @@ function App() {
       </Switch>
     </div>
   );
-}
+};
 
 
 

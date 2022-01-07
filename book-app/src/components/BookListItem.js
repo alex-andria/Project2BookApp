@@ -46,7 +46,7 @@ function BookListItem({ book, buttonText, bookChange }) {
                 <br />
 
                 <span className="BookInfo">Review: </span>
-                <span className="BookInfoValue">review goes here...</span>
+                <span className="BookInfoValue">{book.review}</span>
             </li>
         </div>
     )
