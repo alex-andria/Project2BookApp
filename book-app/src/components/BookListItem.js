@@ -41,7 +41,7 @@ function BookListItem({ book, buttonText, bookChange }) {
                     }
                 <br />
                 <span className="BookInfo">Rating:</span>
-                <span className="BookInfoValue">⭐⭐⭐</span>
+                <span className="BookInfoValue">{book.rating}</span>
 
                 <br />
 

@@ -29,11 +29,11 @@ function ReviewForm({ book, updateBook, setIsOpen }) {
                     <label for="rating">Rating: </label>
                     <select value={bookReview.rating} name="rating" onChange={(e) => changeHandler(e)}>
                         <option value={null} disabled>Select</option>
-                        <option value={1}>1</option>
-                        <option value={2}>2</option>
-                        <option value={3}>3</option>
-                        <option value={4}>4</option>
-                        <option value={5}>5</option>
+                        <option value="⭐">1</option>
+                        <option value="⭐⭐">2</option>
+                        <option value="⭐⭐⭐">3</option>
+                        <option value="⭐⭐⭐⭐">4</option>
+                        <option value="⭐⭐⭐⭐⭐">5</option>
                     </select>
                 </div>
 
