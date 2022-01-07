@@ -25,6 +25,12 @@ code {
 
 /* End of Nav Bar */
 
+/* search */
+  .search{
+    text-align: center;
+  }
+/*  */
+
 /* book Shelf */
   .BookShelf {
     margin: 2rem auto;
@@ -49,11 +55,6 @@ code {
     padding-bottom: 7px;
   }
 
-  .BookBoxAdd {
-    max-width: 150px;
-    max-height: 200px;
-    border: 4px dotted rgb(0, 0, 0);
-  }
 /* end of book shelf */
 
 /* book list */
@@ -118,3 +119,29 @@ code {
   }
 
 /* end of book list */
+
+/* Book Add Form */
+
+.BookBoxItemAdd {
+  border-bottom: 5px solid rgb(80, 58, 53);
+  padding-top: 35px;
+  padding-bottom: 7px;
+}
+
+.AddBookButton {
+  padding-top: 30%;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+  background-color: #E5E5E5;
+  font-size: larger;
+}
+
+.BookBoxButton {
+  width: 100px;
+  height: 125px;
+  background-color: #E5E5E5;
+  border: 4px dotted rgb(0, 0, 0);
+}
+
+/* End Book Add Form */

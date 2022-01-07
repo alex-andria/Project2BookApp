@@ -1,7 +1,7 @@
 import React from "react";
 import BookListItem from "./BookListItem";
 
-function BookList({books}) {
+function BookList({books, buttonText, bookChange}) {
 
     return (
             <div>
@@ -9,10 +9,10 @@ function BookList({books}) {
                 {books.map((book) => 
                     <BookListItem  
                         key={book.id} 
-                        title={book.title}
-                        author={book.author}
-                        timeRead={book['time read']}
-                        dateFinished={book['date finished']}
+                        book={book}
+                        buttonText={buttonText}
+                        bookChange={bookChange}
+                        dateFinished={book.dateFinished}
                     />
                     )}
                 </ul>
